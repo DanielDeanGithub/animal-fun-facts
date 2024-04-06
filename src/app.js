@@ -19,6 +19,7 @@ const animalFacts = (
     <div>
         {background}
         <h1>{title === '' ? 'Click an animal for a fun fact' : title}</h1>
+        <p id='fact'></p>
         <div className='animals'>
             {images}
         </div>
