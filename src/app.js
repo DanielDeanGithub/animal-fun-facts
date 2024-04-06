@@ -5,9 +5,14 @@ const title = '';
 const background = <img src={ocean} className='background' alt='ocean' />
 
 const images = [];
-
 for (let animal in animals) {
     images.push(<img src={animals[animal].image} key={animal} className='animal' alt={animal} aria-label='animal' role='button' />)
+};
+
+const displayFacts = e => {
+    const targetAnimal = animals[e.target.alt];
+    const rng = Math.floor(Math.random() * targetAnimal['facts'].length);
+    const fact = targetAnimal['facts'][rng];
 };
 
 const animalFacts = (
