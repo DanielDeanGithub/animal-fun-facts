@@ -1,6 +1,7 @@
 import { animals } from './animals';
+import ocean from './images/ocean.jpg';
 
-const background = <img src='images/ocean.jpg' className='background' alt='ocean' />
+const background = <img src={ocean} className='background' alt='ocean' />
 
 const title = '';
 const animalFacts = (
