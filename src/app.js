@@ -3,6 +3,7 @@ import ocean from './images/ocean.jpg';
 
 const title = '';
 const background = <img src={ocean} className='background' alt='ocean' />
+const showBackground = Math.random() < 0.5;
 
 const displayFacts = e => {
     const targetAnimal = animals[e.target.alt];
@@ -19,7 +20,7 @@ for (let animal in animals) {
 
 const animalFacts = (
     <div>
-        {background}
+        {showBackground && background}
         <h1>{title === '' ? 'Click an animal for a fun fact' : title}</h1>
         <p id='fact'></p>
         <div className='animals'>
