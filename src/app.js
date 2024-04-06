@@ -21,7 +21,7 @@ for (let animal in animals) {
 const animalFacts = (
     <div>
         {showBackground && background}
-        <h1>{title === '' ? 'Click an animal for a fun fact' : title}</h1>
+        <h1>{title || 'Click an animal for a fun fact'}</h1>
         <p id='fact'></p>
         <div className='animals'>
             {images}
