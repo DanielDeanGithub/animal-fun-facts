@@ -8,6 +8,7 @@ const displayFacts = e => {
     const targetAnimal = animals[e.target.alt];
     const rng = Math.floor(Math.random() * targetAnimal['facts'].length);
     const fact = targetAnimal['facts'][rng];
+    document.getElementById('fact').innerHTML = fact;
 };
 
 const images = [];
