@@ -1,9 +1,15 @@
 import { animals } from './animals';
 import ocean from './images/ocean.jpg';
 
+const title = '';
 const background = <img src={ocean} className='background' alt='ocean' />
 
-const title = '';
+const images = [];
+
+for (let animal in animals) {
+    images.push(<img src={animals[animal].image} key={animal} className='animal' alt={animal} aria-label='animal' role='button' />)
+};
+
 const animalFacts = (
     <div>
         {background}
